@@ -27,7 +27,7 @@ const errorMiddleware=(err,req,res,next)=>  //basically some blocks of code that
                 error.statusCode=400;
             }
 
-            res.statusCode(error.statusCode || 500).json({success:false,message:error.message || "Server Error"});
+            res.status(error.statusCode || 500).json({success:false,message:error.message || "Server Error"});
 
             //here we are intercepting the error and trying to
 
